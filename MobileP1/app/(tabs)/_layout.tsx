@@ -5,6 +5,7 @@ import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
@@ -17,7 +18,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Welcome',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
           ),
@@ -28,10 +29,29 @@ export default function TabLayout() {
         options={{
           title: 'Sing in',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'key' : 'key-outline'} color={color} />
           ),
         }}
       />
+      <Tabs.Screen
+              name="map"
+              options={{
+                title: 'Map',
+                tabBarIcon: ({ color, focused }) => (
+                  <TabBarIcon name={focused ? 'map' : 'map-outline'} color={color} />
+                ),
+              }}
+            />
+      <Tabs.Screen
+              name="profile"
+              options={{
+                title: 'Profile',
+                tabBarIcon: ({ color, focused }) => (
+                  <TabBarIcon name={focused ? 'person' : 'person-outline'} color={color} />
+                ),
+              }}
+            />
+    
     </Tabs>
   );
 }

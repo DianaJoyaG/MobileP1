@@ -16,8 +16,11 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">About this App!</ThemedText>
+        <ThemedText type="title">Code-Together!</ThemedText>
         <HelloWave />
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">About this App...</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Join the Community</ThemedText>
@@ -36,6 +39,9 @@ export default function HomeScreen() {
         <ThemedText>
         Contribute and evolve the platform to better suit your local development needs
         </ThemedText>
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">Join us with you Github Account</ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   );
